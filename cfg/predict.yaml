@@ -1,0 +1,15 @@
+conf: 0.4
+iou: 0.7
+device: 0
+batch: 16
+visualize: True #不太理解，会不会是让我能看到每个神经元起什么作用
+augment: True #提升鲁棒性
+name: 'predict'
+verbose: True
+save: False
+save_txt: False
+save_conf: False #我为了看置信度才设为True，后面提交文件我应该要把他设成False
+show_labels: False
+show_conf: False
+show_boxes: False
+#pil: True #返回图像而不是numpy数组，这个参数报错了，为什么，官网明明有这个参数

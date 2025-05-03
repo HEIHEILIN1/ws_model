@@ -1,0 +1,4 @@
+data: ./data/datasets/cowboy_outfits/cowboy_outfits.yaml
+plot: True
+name: val
+verbose: True

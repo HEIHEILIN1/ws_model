@@ -1,0 +1,8 @@
+names:
+  0: harmful_waste
+  1: kitchen_waste
+  2: other_waste
+  3: recyclable_waste
+path: data/datasets/waste_classification/2025-05-03_5-Fold_Cross-val/split_1
+train: train
+val: val

@@ -1,0 +1,219 @@
+# PASCAL VOC dataset http://host.robots.ox.ac.uk/pascal/VOC/
+# Train command: python train.py --data voc.yaml
+# Default dataset location is next to /yolov5:
+#   /parent_folder
+#     /VOC
+#     /yolov5
+
+
+# download command/URL (optional)
+#download: bash data/scripts/get_voc.sh
+
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+
+#train: D:\code\python\Graduation_project\data\datasets\waste_classification\images\train  # 16551 images
+#val: D:\code\python\Graduation_project\data\datasets\waste_classification\images\val  # 4952 images
+train: /kaggle/input/waste-classification/Graduation_project/data/datasets/waste_classification/images/train
+val: /kaggle/input/waste-classification/Graduation_project/data/datasets/waste_classification/images/val
+
+# number of classes
+nc: 44
+
+# class names
+names: {
+    0: 'harmful_waste',
+    1: 'kitchen_waste',
+    2: 'other_waste',
+    3: 'recyclable_waste'
+}
+#names: {
+#    0: 'Disposable fast food boxes',
+#    1: 'Books and papers',
+#    2: 'Portable power bank',
+#    3: 'Leftover food',
+#    4: 'Bags',
+#    5: 'Garbage bins',
+#    6: 'Plastic utensils',
+#    7: 'Plastic toys',
+#    8: 'Plastic clothes hangers',
+#    9: 'Big bones',
+#    10: 'Dry batteries',
+#    11: 'Express paper bags',
+#    12: 'Plugs and wires',
+#    13: 'Used clothes',
+#    14: 'Aluminum cans',
+#    15: 'Pillows',
+#    16: 'Fruit peels and flesh',
+#    17: 'Plush toys',
+#    18: 'Stainded plastics',
+#    19: 'Stainded papers',
+#    20: 'Personal care products',
+#    21: 'Cigarette butts',
+#    22: 'Toothpicks',
+#    23: 'Glassware',
+#    24: 'Chopping boards',
+#    25: 'Chopsticks',
+#    26: 'Cartons and cardboard boxes',
+#    27: 'Flower pots',
+#    28: 'Tea dregs',
+#    29: 'Vegetable stalks and leaves',
+#    30: 'Eggshells',
+#    31: 'Seasoning bottles',
+#    32: 'Ointments',
+#    33: 'Expired drugs',
+#    34: 'Wine bottles',
+#    35: 'Metal kitchen utensils',
+#    36: 'Metal wares',
+#    37: 'Metal food cans',
+#    38: 'Pots',
+#    39: 'Ceramic wares',
+#    40: 'Shoes',
+#    41: 'Cooking oil barrels',
+#    42: 'Beverage bottles',
+#    43: 'Fish bones'
+#}
+#{
+#    "一次性快餐盒": "Disposable fast food boxes",
+#    "书籍纸张": "Books and papers",
+#    "充电宝": "Portable power bank",
+#    "剩饭剩菜": "Leftover food",
+#    "包": "Bags",
+#    "垃圾桶": "Garbage bins",
+#    "塑料器皿": "Plastic utensils",
+#    "塑料玩具": "Plastic toys",
+#    "塑料衣架": "Plastic clothes hangers",
+#    "大骨头": "Big bones",
+#    "干电池": "Dry batteries",
+#    "快递纸袋": "Express paper bags",
+#    "插头电线": "Plugs and wires",
+#    "旧衣服": "Used clothes",
+#    "易拉罐": "Aluminum cans",
+#    "枕头": "Pillows",
+#    "果皮果肉": "Fruit peels and flesh",
+#    "毛绒玩具": "Plush toys",
+#    "污损塑料": "Stained plastics",
+#    "污损用纸": "Stained papers",
+#    "洗护用品": "Personal care products",
+#    "烟蒂": "Cigarette butts",
+#    "牙签": "Toothpicks",
+#    "玻璃器皿": "Glassware",
+#    "砧板": "Chopping boards",
+#    "筷子": "Chopsticks",
+#    "纸盒纸箱": "Cartons and cardboard boxes",
+#    "花盆": "Flower pots",
+#    "茶叶渣": "Tea dregs",
+#    "菜帮菜叶": "Vegetable stalks and leaves",
+#    "蛋壳": "Eggshells",
+#    "调料瓶": "Seasoning bottles",
+#    "软膏": "Ointments",
+#    "过期药物": "Expired drugs",
+#    "酒瓶": "Wine bottles",
+#    "金属厨具": "Metal kitchen utensils",
+#    "金属器皿": "Metal wares",
+#    "金属食品罐": "Metal food cans",
+#    "锅": "Pots",
+#    "陶瓷器皿": "Ceramic wares",
+#    "鞋": "Shoes",
+#    "食用油桶": "Cooking oil barrels",
+#    "饮料瓶": "Beverage bottles",
+#    "鱼骨": "Fish bones"
+#}
+#  [ '一次性快餐盒',
+#'书籍纸张',
+#'充电宝',
+#'剩饭剩菜',
+#'包',
+#'垃圾桶',
+#'塑料器皿',
+#'塑料玩具',
+#'塑料衣架',
+#'大骨头',
+#'干电池',
+#'快递纸袋',
+#'插头电线',
+#'旧衣服',
+#'易拉罐',
+#'枕头',
+#'果皮果肉',
+#'毛绒玩具',
+#'污损塑料',
+#'污损用纸',
+#'洗护用品',
+#'烟蒂',
+#'牙签',
+#'玻璃器皿',
+#'砧板',
+#'筷子',
+#'纸盒纸箱',
+#'花盆',
+#'茶叶渣',
+#'菜帮菜叶',
+#'蛋壳',
+#'调料瓶',
+#'软膏',
+#'过期药物',
+#'酒瓶',
+#'金属厨具',
+#'金属器皿',
+#'金属食品罐',
+#'锅',
+#'陶瓷器皿',
+#'鞋',
+#'食用油桶',
+#'饮料瓶',
+#'鱼骨'
+#]
+
+#{
+#    "可回收物": [
+#        "书籍纸张",
+#        "充电宝",
+#        "包",
+#        "塑料器皿",
+#        "塑料玩具",
+#        "塑料衣架",
+#        "快递纸袋",
+#        "插头电线",
+#        "旧衣服",
+#        "易拉罐",
+#        "毛绒玩具",
+#        "纸盒纸箱",
+#        "玻璃器皿",
+#        "调料瓶",
+#        "酒瓶",
+#        "金属厨具",
+#        "金属器皿",
+#        "金属食品罐",
+#        "锅",
+#        "鞋",
+#        "食用油桶",
+#        "饮料瓶"
+#    ],
+#    "其他垃圾": [
+#        "一次性快餐盒",
+#        "垃圾桶",
+#        "大骨头",
+#        "干电池",
+#        "污损塑料",
+#        "污损用纸",
+#        "洗护用品",
+#        "烟蒂",
+#        "牙签",
+#        "砧板",
+#        "筷子",
+#        "花盆",
+#        "陶瓷器皿"
+#    ],
+#    "有害垃圾": [
+#        "软膏",
+#        "过期药物"
+#    ],
+#    "厨余垃圾": [
+#        "剩饭剩菜",
+#        "果皮果肉",
+#        "茶叶渣",
+#        "菜帮菜叶",
+#        "蛋壳",
+#        "鱼骨"
+#    ]
+#}

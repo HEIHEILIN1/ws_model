@@ -1,0 +1,64 @@
+#我这是照着官网的train方法的参数介绍写的，但是看运行输出的参数中，好像还有一些能修改
+
+#model: weights/yolov8n_pretrained.pt
+#data: data/datasets/waste_classification/waste_classification.yaml
+#data: /kaggle/input/waste-classification/Graduation_project/data/datasets/waste_classification/waste_classification.yaml
+
+epochs: 100
+batch: 32
+imgsz: 640
+save: True
+save_period: 10
+cache: False
+device: 0
+#name: 'train_15000_sample'
+optimizer: 'auto'
+nbs: 64
+lr0: 0.01
+seed: 0
+deterministic: True
+exist_ok: False
+cos_lr: False
+
+#resume: True #好像不能轻易把这个设为True，不然它会寻找断点好像，找不到就会报错
+
+
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3.0
+warmup_momentum: 0.8
+warmup_bias_lr: 0.1
+box: 7.5
+cls: 0.5
+dfl: 1.5
+dropout: 0.0
+plots: True
+
+#这我设为False，设个钩子每10个周期再验证吧
+val: False
+
+
+
+#数据增广用
+hsv_h: 0.015
+hsv_s: 0.7
+hsv_v: 0.4
+degrees: 0.0
+translate: 0.1
+scale: 0.5
+shear: 0.0
+perspective: 0.0
+flipud: 0.0
+fliplr: 0.5
+bgr: 0.0
+mosaic: 1.0
+mixup: 0.0
+copy_paste: 0.0
+copy_paste_mode: 'flip'
+auto_augment: 'randaugment'
+erasing: 0.4
+crop_fraction: 1.0
+
+
+
