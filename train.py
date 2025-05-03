@@ -4,9 +4,9 @@ import copy
 from K_Fold import K_fold
 import sys
 
-input_dir="/kaggle/input/waste-classification/Graduation_project/"
-k_fold_result_dir="/kaggle/working/"
-working_dir='/kaggle/working/runs/detect'
+input_dir="/kaggle/working/ws_model/"
+k_fold_result_dir="/kaggle/working/ws_model/data/datasets/waste_classification"
+working_dir='/kaggle/working/ws_model/runs/detect'
 # input_dir = ''
 # k_fold_result_dir = "data/datasets/waste_classification/"
 # working_dir = None
