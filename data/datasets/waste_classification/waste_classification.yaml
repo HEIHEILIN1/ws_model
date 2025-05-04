@@ -13,11 +13,10 @@
 
 #train: D:\code\python\Graduation_project\data\datasets\waste_classification\images\train  # 16551 images
 #val: D:\code\python\Graduation_project\data\datasets\waste_classification\images\val  # 4952 images
-train: /kaggle/input/waste-classification/Graduation_project/data/datasets/waste_classification/images/train
-val: /kaggle/input/waste-classification/Graduation_project/data/datasets/waste_classification/images/val
+train: /kaggle/working/ws_model/data/datasets/waste_classification/images
+#val: /kaggle/input/waste-classification/Graduation_project/data/datasets/waste_classification/images/val
 
-# number of classes
-nc: 44
+nc: 4
 
 # class names
 names: {
@@ -26,6 +25,9 @@ names: {
     2: 'other_waste',
     3: 'recyclable_waste'
 }
+
+# number of classes
+#nc: 44
 #names: {
 #    0: 'Disposable fast food boxes',
 #    1: 'Books and papers',
