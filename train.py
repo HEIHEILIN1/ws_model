@@ -4,12 +4,12 @@ import copy
 from K_Fold import K_fold
 import sys
 
-input_dir="/kaggle/working/ws_model/"
-k_fold_result_dir="/kaggle/working/ws_model/data/datasets/waste_classification"
-working_dir='/kaggle/working/ws_model/runs/detect'
-# input_dir = ''
-# k_fold_result_dir = "data/datasets/waste_classification/"
-# working_dir = None
+# input_dir="/kaggle/working/ws_model/"
+# k_fold_result_dir="/kaggle/working/ws_model/data/datasets/waste_classification"
+# working_dir='/kaggle/working/ws_model/runs/detect'
+input_dir = ''
+k_fold_result_dir = "data/datasets/waste_classification/"
+working_dir = None
 # 将ultralytics目录添加到模块搜索路径
 sys.path.append(input_dir+'YOLO/ultralytics')
 
@@ -51,8 +51,11 @@ if __name__ == '__main__':
 
 
     ds_yamls=K_fold(input_dir,k_fold_result_dir)
-    model = ultralytics.YOLO(input_dir+'weights/yolov8n_pretrained.pt')
 
+
+    # model = ultralytics.YOLO(input_dir+'weights/yolov8n_pretrained.pt')
+
+    model = ultralytics.YOLO("YOLO/ultralytics/cfg/models/v8/SEAtt_yolov8.yaml").load(input_dir+'weights/yolov8n_pretrained.pt')
 
     for k, dataset_yaml in enumerate(ds_yamls):
         model.train(
