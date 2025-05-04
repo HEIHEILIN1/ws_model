@@ -1,7 +1,7 @@
 import os
 
 # from ultralytics.data.converter import convert_coco
-from ultralytics.yolo.data.dataloaders.v5loader import autosplit
+from ultralytics.data.split import autosplit
 from utils.coco_to_yolo import coco_to_yolo
 import pandas as pd
 import json

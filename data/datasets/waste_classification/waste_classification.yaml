@@ -13,8 +13,9 @@
 
 #train: D:\code\python\Graduation_project\data\datasets\waste_classification\images\train  # 16551 images
 #val: D:\code\python\Graduation_project\data\datasets\waste_classification\images\val  # 4952 images
-train: /kaggle/working/ws_model/data/datasets/waste_classification/images
-val: /kaggle/working/ws_model/data/datasets/waste_classification/images/val
+Path: /kaggle/working/ws_model/data/datasets/waste_classification/
+train: autosplit_train.txt
+val: autosplit_val.txt
 
 nc: 4
 
