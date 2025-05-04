@@ -14,7 +14,7 @@
 #train: D:\code\python\Graduation_project\data\datasets\waste_classification\images\train  # 16551 images
 #val: D:\code\python\Graduation_project\data\datasets\waste_classification\images\val  # 4952 images
 train: /kaggle/working/ws_model/data/datasets/waste_classification/images
-#val: /kaggle/input/waste-classification/Graduation_project/data/datasets/waste_classification/images/val
+val: /kaggle/working/ws_model/data/datasets/waste_classification/images/val
 
 nc: 4
 
