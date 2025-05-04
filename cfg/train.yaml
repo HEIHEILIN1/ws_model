@@ -12,23 +12,21 @@ save_period: 10
 cache: False
 device: 0
 #name: 'train_15000_sample'
-optimizer: 'auto'
 nbs: 64
 lr0: 0.01
 seed: 0
 deterministic: True
 exist_ok: False
-cos_lr: False
 
 #resume: True #好像不能轻易把这个设为True，不然它会寻找断点好像，找不到就会报错
 
 
-lrf: 0.01
-momentum: 0.937
-weight_decay: 0.0005
-warmup_epochs: 3.0
-warmup_momentum: 0.8
-warmup_bias_lr: 0.1
+#lrf: 0.01
+#momentum: 0.937
+#weight_decay: 0.0005
+#warmup_epochs: 3.0
+#warmup_momentum: 0.8
+#warmup_bias_lr: 0.1
 box: 7.5
 cls: 0.5
 dfl: 1.5
