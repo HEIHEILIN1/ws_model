@@ -49,7 +49,6 @@ if __name__ == '__main__':
     # model.train(cfg='/kaggle/input/waste-classification/Graduation_project/cfg/train.yaml')
 
 
-
     ds_yamls=K_fold(input_dir,k_fold_result_dir)
 
 
