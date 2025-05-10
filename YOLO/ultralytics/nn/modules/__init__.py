@@ -16,7 +16,7 @@ Examples:
     >>> torch.onnx.export(m, x, f)
     >>> os.system(f"onnxslim {f} {f} && open {f}")  # pip install onnxslim
 """
-
+from .attention import ECAAttention
 from .block import (
     C1,
     C2,
@@ -58,7 +58,7 @@ from .block import (
     RepVGGDW,
     ResNetLayer,
     SCDown,
-    TorchVision,
+    TorchVision
 )
 from .conv import (
     CBAM,
@@ -74,7 +74,7 @@ from .conv import (
     Index,
     LightConv,
     RepConv,
-    SpatialAttention,
+    SpatialAttention
 )
 from .head import (
     OBB,
@@ -101,7 +101,6 @@ from .transformer import (
     TransformerEncoderLayer,
     TransformerLayer,
 )
-
 __all__ = (
     "Conv",
     "Conv2",
@@ -179,4 +178,5 @@ __all__ = (
     "TorchVision",
     "Index",
     "A2C2f",
+    'ECAAttention'
 )
